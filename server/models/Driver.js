@@ -33,6 +33,6 @@ city: {
 
 });
 
-const Driver = mongoose.model('Driver', driverSchema)
+const Driver = mongoose.model('Driver', driverSchema , "Driver")
 
 module.exports = Driver

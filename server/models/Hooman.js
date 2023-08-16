@@ -71,6 +71,6 @@ kitty: {
 
 
 })
-const Hooman = mongoose.model("Hooman", hoomanSchema)
+const Hooman = mongoose.model("Hooman", hoomanSchema, "Hooman")
 
 module.exports = Hooman;

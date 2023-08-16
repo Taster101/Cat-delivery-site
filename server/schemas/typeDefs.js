@@ -7,14 +7,17 @@ const typeDefs = gql`
     age: Int
     gender: String
     color: String
-    truma: String
+    trauma: String
     declawed: Boolean
  }
 type Query {
     viewKitties: [Kitty]
 }
 
-
+type Mutation {
+    addKitty(name: String!, breed: String!, age: Int!,
+        gender: String!, color: String!, trauma: String, declawed: Boolean! ): Kitty
+}
 
 `;
 

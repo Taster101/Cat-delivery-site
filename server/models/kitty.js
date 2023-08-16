@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const { Schema , model} = mongoose;
 
 const kittySchema = new Schema ({
     name: {
@@ -25,16 +25,16 @@ const kittySchema = new Schema ({
         type: String,
         required: true,
     },
-    truma: {
+    trauma: {
         type: String,
 
     },
     declawed: {
         type: Boolean,
-        require: true
+        required: true
     }
 })
 
-const Kitty = mongoose.model("Kitty", kittySchema);
+const Kitty = mongoose.model("Kitty", kittySchema, "Kitty");
 
 module.exports =  Kitty;
